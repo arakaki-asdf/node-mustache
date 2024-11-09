@@ -84,9 +84,8 @@ function templateToHtml(jsonPath, templatePath, outputDir)
 function main() {
     const jsonPaths = loadDirectoryFiles("json");
     for (const jsonPath of jsonPaths) {
-        templateToHtml(jsonPath, "@template.html", "output/")
+        templateToHtml(jsonPath, path.join("template","@template.html"), "output/")
     }
 }
 
 main();
-
